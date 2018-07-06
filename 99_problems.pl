@@ -22,8 +22,8 @@ solve_4([_|Xs], L, C) :-
 solve_4([_], L, C) :- L is C + 1.
 
 solve_5([], []).
-solve_5([X], [X]).
 solve_5([X|Xs], R) :- solve_5(Xs, R, [X]).
 solve_5([X|Xs], R, Acc) :- solve_5(Xs, R, [X|Acc]).
 solve_5([], R, R).
-     
+    
+solve_6(X) :- solve_5(X, X).
